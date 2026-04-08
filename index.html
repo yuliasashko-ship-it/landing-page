@@ -219,6 +219,48 @@
       color: #aaa;
     }
 
+    /* DELIVERABLE */
+    .deliverable {
+      background: #F3F6F0;
+      background-image: none;
+      padding: 64px 24px;
+    }
+    .deliverable-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      gap: 48px;
+      align-items: center;
+    }
+    .deliverable-text { flex: 1; }
+    .deliverable-text h2 { font-size: 26px; font-weight: 700; margin-bottom: 16px; }
+    .deliverable-text p { color: #555; margin-bottom: 16px; }
+    .deliverable-text ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .deliverable-text ul li {
+      padding-right: 20px;
+      position: relative;
+      color: #444;
+      font-size: 16px;
+    }
+    .deliverable-text ul li::before {
+      content: "✓";
+      position: absolute;
+      right: 0;
+      color: #7A9467;
+      font-weight: 700;
+    }
+    .deliverable-badge {
+      background: #1C2118;
+      color: #fff;
+      border-radius: 12px;
+      padding: 32px 28px;
+      text-align: center;
+      flex-shrink: 0;
+      min-width: 180px;
+    }
+    .deliverable-badge span { font-size: 18px; font-weight: 700; display: block; margin-bottom: 10px; }
+    .deliverable-badge small { font-size: 13px; color: #A8BFAA; line-height: 1.5; }
+
     /* TESTIMONIALS */
     .testimonials {
       background: #FAF8F5;
@@ -329,6 +371,26 @@
       <div class="outcome">
         <h3>פורטפוליו שאנשים מבינים</h3>
         <p>מבנה, סדר, מה להשאיר ומה לא. כדי שמי שמסתכל יבין.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERABLE -->
+  <section class="deliverable">
+    <div class="deliverable-inner">
+      <div class="deliverable-text">
+        <h2>מה יוצא מהמפגש</h2>
+        <p>בסוף השיחה תקבלי מסמך מסכם עם:</p>
+        <ul>
+          <li>המסר המרכזי שלך — מנוסח, ברור, מוכן לשימוש</li>
+          <li>ניתוח קצר של הפרויקטים שלך — מה לשים קדימה ולמה</li>
+          <li>טיפים ספציפיים לפורטפוליו שלך — לא גנריים</li>
+          <li>הצעדים הבאים — מה לעשות עם זה מחר בבוקר</li>
+        </ul>
+      </div>
+      <div class="deliverable-badge">
+        <span>מסמך מסכם</span>
+        <small>נשלח תוך 24 שעות מהמפגש</small>
       </div>
     </div>
   </section>

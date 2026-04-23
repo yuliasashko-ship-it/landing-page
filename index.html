@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>יוליה סשקו — ייעוץ למעצבות</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <title>יוליה סשקו — Design Clarity Session</title>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700;900&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Rubik', sans-serif;
-      background-color: #FFFFFF;
-      background-image: radial-gradient(circle, #C8D4C0 1px, transparent 1px);
-      background-size: 28px 28px;
+      background-color: #F9F7F4;
       color: #1A1A1A;
       line-height: 1.7;
       font-size: 17px;
@@ -20,290 +18,311 @@
 
     /* NAV */
     nav {
-      padding: 22px 48px;
+      padding: 28px 48px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #E2DDD7;
+      background: #F9F7F4;
     }
-    nav .name { font-weight: 700; font-size: 18px; letter-spacing: -0.3px; }
+    nav .name {
+      font-weight: 600;
+      font-size: 16px;
+      color: #555;
+      letter-spacing: 0.2px;
+    }
     nav a {
-      color: #7A9467;
+      color: #1A1A1A;
       text-decoration: none;
       font-weight: 600;
       font-size: 15px;
-      border: 1.5px solid #7A9467;
-      padding: 8px 20px;
-      border-radius: 6px;
-      transition: all 0.2s;
+      border-bottom: 2px solid #7A9467;
+      padding-bottom: 2px;
+      transition: color 0.2s;
     }
-    nav a:hover { background: #7A9467; color: #fff; }
+    nav a:hover { color: #7A9467; }
 
     /* HERO */
     .hero {
-      max-width: 780px;
-      margin: 80px auto 64px;
-      padding: 0 24px;
-      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 96px 48px 80px;
+      border-bottom: 1px solid #E2DDD7;
+    }
+    .hero-service {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: #7A9467;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-service::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: #7A9467;
     }
     .hero h1 {
-      font-size: 44px;
-      font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -1px;
-      margin-bottom: 20px;
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: clamp(42px, 6vw, 68px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 28px;
       color: #111;
+      max-width: 700px;
     }
-    .hero h1 span { color: #7A9467; }
-    .hero p {
-      font-size: 19px;
-      color: #555;
-      max-width: 560px;
-      margin: 0 auto 36px;
+    .hero h1 em {
+      font-style: normal;
+      color: #7A9467;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: #666;
+      max-width: 520px;
+      margin-bottom: 40px;
+      line-height: 1.6;
     }
     .btn-primary {
       display: inline-block;
-      background: #7A9467;
+      background: #1C2118;
       color: #fff;
-      padding: 14px 36px;
-      border-radius: 8px;
+      padding: 14px 32px;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 17px;
+      font-weight: 600;
+      font-size: 16px;
       transition: background 0.2s;
+      letter-spacing: 0.2px;
     }
-    .btn-primary:hover { background: #627A52; }
-    .hero-note {
-      margin-top: 14px;
-      font-size: 14px;
-      color: #999;
-    }
-
-    /* DIVIDER */
-    .divider { display: none; }
-
-    /* PROBLEM */
-    .problem {
-      max-width: 620px;
-      margin: 64px auto;
-      padding: 40px 48px;
-      text-align: center;
-      background: #F4F7F2;
-      border: 1px solid #7A9467;
-      border-radius: 16px;
-    }
-    .problem h2 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      color: #111;
-    }
-    .problem p { color: #555; font-size: 17px; }
+    .btn-primary:hover { background: #2e3629; }
 
     /* FOR WHO */
     .for-who {
-      background: #fff;
-      padding: 64px 24px;
-    }
-    .for-who-inner { max-width: 780px; margin: 0 auto; }
-    .for-who h2 {
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 36px;
-      text-align: center;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #FAF8F5;
-      border: 1px solid #E8E2D9;
-      border-radius: 10px;
-      padding: 28px 24px;
-    }
-    .card .icon { font-size: 28px; margin-bottom: 12px; }
-    .card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
-    .card p { font-size: 15px; color: #666; }
-
-    /* OFFER */
-    .offer {
-      max-width: 780px;
+      max-width: 860px;
       margin: 0 auto;
-      padding: 64px 24px;
+      padding: 80px 48px;
+      border-bottom: 1px solid #E2DDD7;
     }
-    .offer h2 {
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 12px;
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: #999;
+      text-transform: uppercase;
+      margin-bottom: 48px;
     }
-    .offer .sub {
-      font-size: 16px;
-      color: #777;
-      margin-bottom: 36px;
+    .problems {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
     }
-    .outcomes {
+    .problem-item {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: 80px 1fr;
+      gap: 0 32px;
+      padding: 32px 0;
+      border-bottom: 1px solid #E2DDD7;
+      align-items: start;
     }
-    .outcome {
-      border-right: 3px solid #7A9467;
-      padding: 4px 16px;
+    .problem-item:first-child { border-top: 1px solid #E2DDD7; }
+    .problem-num {
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 48px;
+      font-weight: 900;
+      color: #E2DDD7;
+      line-height: 1;
+      padding-top: 4px;
     }
-    .outcome h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-    .outcome p { font-size: 15px; color: #666; }
+    .problem-content h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #111;
+      line-height: 1.4;
+    }
+    .problem-content p {
+      font-size: 15px;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    /* HOW */
+    .how {
+      background: #1C2118;
+      padding: 80px 48px;
+    }
+    .how-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .how .section-label { color: #6A7D62; }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0 32px;
+      padding: 32px 0;
+      border-bottom: 1px solid #2e3629;
+      align-items: start;
+    }
+    .step:first-child { border-top: 1px solid #2e3629; }
+    .step-num {
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 48px;
+      font-weight: 900;
+      color: #2e3629;
+      line-height: 1;
+      padding-top: 4px;
+    }
+    .step-content h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #F9F7F4;
+    }
+    .step-content p {
+      font-size: 15px;
+      color: #7A8F72;
+      line-height: 1.6;
+    }
 
     /* ABOUT */
     .about {
-      background: #fff;
-      padding: 64px 24px;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 48px;
+      border-bottom: 1px solid #E2DDD7;
     }
     .about-inner {
-      max-width: 780px;
-      margin: 0 auto;
-      display: flex;
+      display: grid;
+      grid-template-columns: 180px 1fr;
       gap: 48px;
-      align-items: flex-start;
+      align-items: start;
     }
     .about-photo-img {
-      width: 200px;
-      height: 100%;
-      min-height: 300px;
-      border-radius: 12px;
+      width: 180px;
+      height: 220px;
       object-fit: cover;
       object-position: center top;
-      flex-shrink: 0;
-      align-self: stretch;
+      filter: grayscale(20%);
     }
+    .about-text .section-label { margin-bottom: 20px; }
     .about-text h2 {
-      font-size: 22px;
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 28px;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
+      color: #111;
+      letter-spacing: -0.5px;
     }
     .about-text p {
-      color: #555;
+      color: #666;
       font-size: 16px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      line-height: 1.7;
     }
     .about-text a {
       color: #7A9467;
       font-weight: 600;
       text-decoration: none;
-      font-size: 15px;
-    }
-    .about-text a:hover { text-decoration: underline; }
-
-    /* CTA FINAL */
-    .cta-final {
-      text-align: center;
-      padding: 80px 24px;
-      background: #1C2118;
-      background-image: none;
-    }
-    .cta-final h2 {
-      font-size: 34px;
-      font-weight: 900;
-      margin-bottom: 16px;
-      color: #fff;
-    }
-    .cta-final p {
-      color: #A8BFAA;
-      margin-bottom: 32px;
-      font-size: 17px;
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid #E8E2D9;
-      text-align: center;
-      padding: 24px;
       font-size: 14px;
-      color: #aaa;
+      border-bottom: 1px solid #7A9467;
+      padding-bottom: 1px;
     }
-
-    /* DELIVERABLE */
-    .deliverable {
-      background: #F3F6F0;
-      background-image: none;
-      padding: 64px 24px;
-    }
-    .deliverable-inner {
-      max-width: 780px;
-      margin: 0 auto;
-      display: flex;
-      gap: 48px;
-      align-items: center;
-    }
-    .deliverable-text { flex: 1; }
-    .deliverable-text h2 { font-size: 26px; font-weight: 700; margin-bottom: 16px; }
-    .deliverable-text p { color: #555; margin-bottom: 16px; }
-    .deliverable-text ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .deliverable-text ul li {
-      padding-right: 20px;
-      position: relative;
-      color: #444;
-      font-size: 16px;
-    }
-    .deliverable-text ul li::before {
-      content: "✓";
-      position: absolute;
-      right: 0;
-      color: #7A9467;
-      font-weight: 700;
-    }
-    .deliverable-badge {
-      background: #1C2118;
-      color: #fff;
-      border-radius: 12px;
-      padding: 32px 28px;
-      text-align: center;
-      flex-shrink: 0;
-      min-width: 180px;
-    }
-    .deliverable-badge span { font-size: 18px; font-weight: 700; display: block; margin-bottom: 4px; }
-    .deliverable-badge small { font-size: 13px; color: #A8BFAA; line-height: 1.5; }
+    .about-text a:hover { opacity: 0.75; }
 
     /* TESTIMONIALS */
     .testimonials {
-      background: #FAF8F5;
-      padding: 64px 24px;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 48px;
+      border-bottom: 1px solid #E2DDD7;
     }
-    .testimonials-inner { max-width: 780px; margin: 0 auto; }
-    .testimonials-inner h2 {
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 36px;
-      text-align: center;
+    .testimonial-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
     }
-    .testimonial-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+    .testimonial-item {
+      padding: 36px 0;
+      border-bottom: 1px solid #E2DDD7;
     }
-    .testimonial-card {
-      background: #fff;
-      border: 1px solid #E8E2D9;
-      border-radius: 10px;
-      padding: 28px 24px;
-    }
-    .testimonial-card .quote {
-      font-size: 16px;
+    .testimonial-item:first-child { border-top: 1px solid #E2DDD7; }
+    .testimonial-item blockquote {
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: 20px;
+      font-weight: 400;
       color: #333;
-      line-height: 1.7;
+      line-height: 1.6;
       margin-bottom: 16px;
-      font-style: italic;
+      padding-right: 24px;
+      border-right: 3px solid #7A9467;
     }
-    .testimonial-card .attribution {
-      font-size: 14px;
-      color: #7A9467;
+    .testimonial-item cite {
+      font-style: normal;
+      font-size: 13px;
       font-weight: 600;
+      color: #999;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
 
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 32px; }
-      nav { padding: 18px 20px; }
-      .about-inner { flex-direction: column; }
+    /* CTA FINAL */
+    .cta-final {
+      background: #7A9467;
+      padding: 96px 48px;
+      text-align: center;
+    }
+    .cta-final h2 {
+      font-family: 'Frank Ruhl Libre', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 900;
+      margin-bottom: 32px;
+      color: #fff;
+      letter-spacing: -1px;
+      line-height: 1.15;
+    }
+    .btn-light {
+      display: inline-block;
+      background: #fff;
+      color: #1C2118;
+      padding: 14px 32px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      transition: opacity 0.2s;
+    }
+    .btn-light:hover { opacity: 0.9; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #E2DDD7;
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #bbb;
+      background: #F9F7F4;
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 20px 24px; }
+      .hero { padding: 64px 24px 56px; }
+      .for-who, .about, .testimonials { padding: 56px 24px; }
+      .how { padding: 56px 24px; }
+      .cta-final { padding: 64px 24px; }
+      .problem-item, .step { grid-template-columns: 48px 1fr; gap: 0 20px; }
+      .problem-num, .step-num { font-size: 32px; }
+      .about-inner { grid-template-columns: 1fr; }
+      .about-photo-img { width: 100%; height: 240px; }
     }
   </style>
 </head>
@@ -312,126 +331,86 @@
   <!-- NAV -->
   <nav>
     <span class="name">יוליה סשקו</span>
-    <a href="https://wa.me/972549401451" target="_blank">דברי איתי בוואטסאפ</a>
+    <a href="https://wa.me/972549401451" target="_blank">דברו איתי</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <h1>מעצבות עובדות קרוב מדי<br/><span>לעבודה שלהן.</span></h1>
-    <p>אני נותנת עיניים מבחוץ — מישהי שמבינה עיצוב ויודעת איך זה נשמע בצד השני.<br/>מפגש אחד. יוצאת עם בהירות.</p>
-    <a class="btn-primary" href="https://wa.me/972549401451" target="_blank">בואי נדבר</a>
-    <p class="hero-note">שיחת היכרות קצרה · ללא עלות</p>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- PROBLEM -->
-  <section class="problem">
-    <h2>כשהייתי מעצבת יחידה בצוות, לא היה לי את מי לשאול.</h2>
-    <p>לא מישהי שתגיד לי מה עובד בעבודה שלי ספציפית, ומה אני מפספסת.</p>
-    <p>יש הרבה תוכן באינטרנט. ליישם אותו על הפרויקט שלך, הקהל שלך, המנהל שלך — זה כבר משהו אחר.</p>
+    <p class="hero-service">Design Clarity Session · למעצבים</p>
+    <h1>ברור לך מה לעשות.<br/><em>לא ברור מה לא עובד.</em></h1>
+    <p class="hero-sub">שיחה של 45 דקות שמגיעה מוכנה — ויוצאים ממנה עם אבחון ברור ופעולה אחת ספציפית.</p>
+    <a class="btn-primary" href="https://wa.me/972549401451" target="_blank">שלחו הודעה</a>
   </section>
 
   <!-- FOR WHO -->
   <section class="for-who">
-    <div class="for-who-inner">
-      <h2>למי זה מתאים?</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="icon">🎨</div>
-          <h3>מעצבת שמכינה פורטפוליו</h3>
-          <p>יש לך עבודות. לא ברור איך לסדר אותן ומה לספר על כל אחת.</p>
-        </div>
-        <div class="card">
-          <div class="icon">📈</div>
-          <h3>מעצבת שרוצה לעלות רמה</h3>
-          <p>עובדת בחברה, רוצה שמנהלים ישימו לב לעבודה שלך — אבל לא יודעת איך לגרום לזה.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🔍</div>
-          <h3>מעצבת בחיפוש עבודה</h3>
-          <p>שולחת CV, מגיעה לראיונות, אבל משהו לא עובד. ואת לא יודעת למה.</p>
+    <p class="section-label">למי זה מתאים</p>
+    <div class="problems">
+      <div class="problem-item">
+        <span class="problem-num">01</span>
+        <div class="problem-content">
+          <h3>הפורטפוליו מביא ראיונות — אבל הוויטבורד לא עובד</h3>
+          <p>הגעת לשלב הבית או לוויטבורד כמה פעמים. משהו שם לא סוגר. לא ברור מה.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- OFFER -->
-  <section class="offer">
-    <h2>מה קורה במפגש?</h2>
-    <p class="sub">מפגש אחד של שעה. מבוסס, ממוקד, עם תוצר שאפשר לעבוד איתו מחר בבוקר.</p>
-    <div class="outcomes">
-      <div class="outcome">
-        <h3>מסר ברור</h3>
-        <p>משפט אחד שמסביר מי את ומה את עושה. בלי ז'רגון, בלי סיבובים.</p>
-      </div>
-      <div class="outcome">
-        <h3>שפה שמראה חשיבה</h3>
-        <p>לכל פרויקט — למה בחרת בזה, מה שקלת, איך הגעת לשם. לא רק output.</p>
-      </div>
-      <div class="outcome">
-        <h3>פורטפוליו שאנשים מבינים</h3>
-        <p>מבנה, סדר, מה להשאיר ומה לא. כדי שמי שמסתכל יבין.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- DELIVERABLE -->
-  <section class="deliverable">
-    <div class="deliverable-inner">
-      <div class="deliverable-text">
-        <h2>מה יוצא מהמפגש</h2>
-        <p>בסוף השיחה תקבלי מסמך מסכם עם:</p>
-        <ul>
-          <li>המסר המרכזי שלך - מנוסח, ברור, מוכן לשימוש</li>
-          <li>ניתוח קצר של הפרויקטים שלך - מה לשים קדימה ולמה</li>
-          <li>טיפים ספציפיים לפורטפוליו שלך - לא גנריים</li>
-          <li>הצעדים הבאים - מה לעשות עם זה מחר בבוקר</li>
-        </ul>
-      </div>
-      <div class="deliverable-badge">
-        <div style="font-size:40px; margin-bottom:12px;">📄</div>
-        <span>מסמך מסכם</span>
-        <small>נשלח תוך 24 שעות מהמפגש</small>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <div class="testimonials-inner">
-      <h2>מה אומרות מי שעבדו איתי</h2>
-      <div class="testimonial-cards">
-        <div class="testimonial-card">
-          <p class="quote">"בזכותך קולט את המורכבות בעשיה שלי. ערכתי את המצגת מחדש ובכלל את כל המחשבה סביב המיזם."</p>
-          <p class="attribution">אילן, יזם</p>
+      <div class="problem-item">
+        <span class="problem-num">02</span>
+        <div class="problem-content">
+          <h3>שולחים CV, לא מגיעים לראיונות</h3>
+          <p>השקעת בפורטפוליו, עדכנת קו"ח — ועדיין שקט. המחסום הוא לפני מה שחשבת.</p>
         </div>
-        <div class="testimonial-card">
-          <p class="quote">"למדתי ממך המון. הבנתי כמה חשוב לראות את התמונה הגדולה ואיך באמת לגשת לפרויקט ולבצע אותו על הצד הטוב ביותר."</p>
-          <p class="attribution">מיכל, מעצבת פרילאנס</p>
+      </div>
+      <div class="problem-item">
+        <span class="problem-num">03</span>
+        <div class="problem-content">
+          <h3>מגיעים לראיונות — אבל משהו בשיחה לא סוגר</h3>
+          <p>הראיונות הולכים בסדר לדעתך. בוחרים מישהו אחר. הפידבק גנרי.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <hr class="divider" />
+  <!-- HOW -->
+  <section class="how">
+    <div class="how-inner">
+      <p class="section-label">איך זה עובד</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h3>אני עוברת על החומרים שלך לפני</h3>
+            <p>פורטפוליו, קו"ח, מה שרלוונטי. מגיעה לשיחה עם הקשר — לא מאבחנת עיוורת.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h3>שיחה של 45 דקות</h3>
+            <p>השאלה שאני שואלת היא "איפה בדיוק זה נשבר?" — לא "מה רוצה לשפר". הבעיה האמיתית מגיעה משם.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h3>מסמך follow-up עם worksheet</h3>
+            <p>לא רשימת עצות. מה עובד, איך הגעתי לאבחון, ופעולה אחת ספציפית. אני שולחת תוך 24 שעות.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ABOUT -->
   <section class="about">
+    <p class="section-label">מי אני</p>
     <div class="about-inner">
-      <img src="yulia.png" alt="יוליה סשקו" class="about-photo-img" />
+      <img src="yulia.jpg" alt="יוליה סשקו" class="about-photo-img" />
       <div class="about-text">
         <h2>היי, אני יוליה</h2>
-        <p><strong>גיל 16</strong> כתבתי מדריכי עיצוב וניהלתי פורום עיצוב.</p>
-        <p><strong>גיל 18</strong> עבודה ראשונה בעיצוב. תואר בתקשורת חזותית, משרד פרסום, ומשם ל-UX.</p>
-        <p><strong>סטארטאפים ועמותות</strong> עבדתי על מוצרים מורכבים עם פיתוח, מנהלים, יזמים. הבנתי שאני רוצה לעבוד יותר על הלמה. עברתי לניהול מוצר.</p>
-        <p><strong>היום</strong> עובדת בשירות הציבורי ועושה MBA. ומהצד הזה רואה בדיוק מה חסר: מעצבות יודעות לעצב, אבל כשמשהו לא עובד הן לא תמיד יודעות למה.</p>
-        <p><strong>לכן אני כאן</strong> עשיתי עיצוב לפרסום, למרקטינג, ל-UX ולפרודקט. למדתי שהעבודה יכולה להיות מצוינת — ועדיין לא להגיע. לא כמעצבת ותיקה יותר. כמישהי שיודעת איך זה נשמע בצד השני.
-        </p>
+        <p>מאמינה שיש דברים שרק שיחה עם אדם אחר יכולה לתת — לא גוגל, לא מדריך. לפעמים מישהי שרואה את הדברים שלך מבחוץ עושה את ההבדל.</p>
+        <p>עברתי מעיצוב לניהול מוצר. ישבתי בחדר עם מפתחים, מנהלים ומגייסים — ומביאה עיניים של פרודקט על העבודה שלך.</p>
         <a href="https://www.linkedin.com/in/yuliasashko/" target="_blank" style="display:inline-flex; align-items:center; gap:8px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#7A9467">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#7A9467">
             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
           </svg>
           לינקדין שלי
@@ -440,15 +419,30 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <p class="section-label">מה אומרים</p>
+    <div class="testimonial-list">
+      <div class="testimonial-item">
+        <blockquote>"בשיחה שלנו העלית בעיות אמיתיות שלא חשבתי עליהן. לא חשבתי מספיק על קהל היעד — עכשיו אני יודעת מה לשפר ואיך למדוד."</blockquote>
+        <cite>הגר, מעצבת פרודקט</cite>
+      </div>
+      <div class="testimonial-item">
+        <blockquote>"זה היה מאוד מאוד יעיל. מאוד to the point."</blockquote>
+        <cite>לי, מעצבת פרודקט</cite>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA FINAL -->
   <section class="cta-final">
-    <h2>מוכנה לדבר?</h2>
-    <p>שיחת היכרות קצרה. בלי עלות, בלי התחייבות. רק לבדוק אם אני יכולה לעזור.</p>
-    <a class="btn-primary" href="https://wa.me/972549401451" target="_blank">שלחי לי הודעה בוואטסאפ</a>
+    <h2>נשמע מוכר?</h2>
+    <a class="btn-light" href="https://wa.me/972549401451" target="_blank">שלחו הודעה בוואטסאפ</a>
+    <p style="margin-top:16px; font-size:14px; color:rgba(255,255,255,0.65);">אחזור תוך 24 שעות לתיאום שיחה.</p>
   </section>
 
   <!-- FOOTER -->
-  <footer>© 2026 יוליה סשקו</footer>
+  <footer>© 2026 יוליה סשקו · Design Clarity Session</footer>
 
 </body>
 </html>
